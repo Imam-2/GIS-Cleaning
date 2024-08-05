@@ -418,6 +418,8 @@ if uploaded_file is not None:
                     
                     df_4217_final = pd.concat([df_melted2.drop(columns='Variabel'), df_melted[['Total Stok']]], axis=1)
                     df_4217_final['Kode Barang'] = df_4217_final['Kode Barang'].astype('int')
+                    df_4217_final['Total Stok'] = df_4217_final['Total Stok'].astype('float')
+                    
                     concatenated_df.append(df_4217_final)
                     
                 concatenated_df = pd.concat(concatenated_df, ignore_index=True)
